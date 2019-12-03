@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fast_food/model/navigation_model.dart';
 import 'package:fast_food/theme.dart';
 import 'collapsing_list_title.dart';
-import 'package:page_transition/page_transition.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
   @override
@@ -55,7 +54,6 @@ class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
                   return CollapsingListTitle(
                       onTap:(){
                         setState(() {
-                          //Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: navigationItems[counter].cmp));
                           Navigator.pushNamed(context, navigationItems[counter].cmp);
                           currentSelectedIndex = counter;
                         });
