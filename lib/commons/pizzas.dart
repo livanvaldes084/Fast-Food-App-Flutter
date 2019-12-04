@@ -4,6 +4,7 @@ import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 import 'package:fast_food/model/pizza_model.dart';
 import 'package:fast_food/widgets/horizontal_list.dart';
 import 'package:fast_food/theme.dart';
+import 'package:fast_food/widgets/detail_items.dart';
 
 class PizzasPage extends StatefulWidget {
   @override
@@ -77,8 +78,10 @@ class _PizzasPageState extends State<PizzasPage> with SingleTickerProviderStateM
                 ),
               ),
               ItemsLists(),
-              ItemsLists(),
-
+              SizedBox(
+                height: 15,
+              ),
+              DetailsPage()
             ],
           ),
         ),

@@ -12,6 +12,34 @@ class ItemsLists extends StatelessWidget {
             img_location: 'assets/img/pizza.png',
             img_caption: 'Pizza',
           ),
+          MyListView(
+            img_location: 'assets/img/pizza.png',
+            img_caption: 'Pizza',
+          ),
+          MyListView(
+            img_location: 'assets/img/pizza.png',
+            img_caption: 'Pizza',
+          ),
+          MyListView(
+            img_location: 'assets/img/pizza.png',
+            img_caption: 'Pizza',
+          ),
+          MyListView(
+            img_location: 'assets/img/pizza.png',
+            img_caption: 'Pizza',
+          ),
+          MyListView(
+            img_location: 'assets/img/pizza.png',
+            img_caption: 'Pizza',
+          ),
+          MyListView(
+            img_location: 'assets/img/pizza.png',
+            img_caption: 'Pizza',
+          ),
+          MyListView(
+            img_location: 'assets/img/pizza.png',
+            img_caption: 'Pizza',
+          ),
         ],
       ),
     );
