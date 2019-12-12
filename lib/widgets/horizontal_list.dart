@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fast_food/theme.dart';
 import 'package:fast_food/model/pizza_model.dart';
 import 'package:fast_food/widgets/list_items.dart';
 import 'package:fast_food/widgets/detail_items.dart';
