@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:fast_food/theme.dart';
 
 class DetailsPage extends StatelessWidget {
+  String title;
+  DetailsPage({this.title});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,7 +35,7 @@ class DetailsPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                'Fatija Pizza',
+                                title,
                                 textAlign: TextAlign.end,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 22),

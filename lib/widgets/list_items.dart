@@ -4,12 +4,14 @@ import 'package:fast_food/theme.dart';
 class ListItems extends StatefulWidget {
 
   final String title;
+  final String picture;
   final AnimationController animationController;
   final bool isSelected;
   final Function onTap;
 
   ListItems({
     @required this.title,
+    @required this.picture,
     @required this.animationController,
     this.isSelected = false,
     this.onTap
@@ -37,18 +39,15 @@ class _ListItemsState extends State<ListItems> {
       onTap: widget.onTap,
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(16.0)),
-          color: widget.isSelected ? Colors.transparent.withOpacity(0.3):Colors.transparent,
+          color: widget.isSelected ? Colors.orange: itemListColor,
+          borderRadius: BorderRadius.all(Radius.circular(15.0)),
         ),
-        width: widthAnimation.value,
+        width: 90,
         margin: EdgeInsets.symmetric(horizontal: 8.0),
         padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
         child: Row(
           children: <Widget>[
-            SizedBox(width: sizedBoxAnimation.value),
-            (widthAnimation.value >= 220)
-                ? Text(widget.title, style: widget.isSelected ? listTitleSelectedTextStyle : listTitleDefaultTextStyle)
-                : Container()
+            Image.asset(widget.picture)
           ],
         ),
       ),
