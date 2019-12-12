@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fast_food/screens/food.dart';
+import 'package:fast_food/screens/hamburger.dart';
 import 'package:fast_food/screens/pizzas.dart';
 import 'package:fast_food/screens/breackfast.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       home: MyHomePage(),
       routes: {
         'pizzas' : (context) => PizzasPage(),
-        'food' : (context) => FoodPage(),
+        'hamburger' : (context) => HamburgerPage(),
         'breackfast' : (context) => BreakFastPage(),
       },
     );

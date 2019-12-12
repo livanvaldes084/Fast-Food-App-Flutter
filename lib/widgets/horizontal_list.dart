@@ -5,6 +5,7 @@ import 'package:fast_food/widgets/detail_items.dart';
 
 
 class ItemList extends StatefulWidget {
+
   @override
   _ItemListState createState() => _ItemListState();
 }

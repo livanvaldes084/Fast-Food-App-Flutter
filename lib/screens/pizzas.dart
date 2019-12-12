@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 import 'package:fast_food/widgets/horizontal_list.dart';
-import 'package:fast_food/theme.dart';
 import 'package:fast_food/commons/base_bar.dart';
 
 class PizzasPage extends StatelessWidget {
