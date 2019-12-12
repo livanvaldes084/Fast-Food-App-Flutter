@@ -53,6 +53,11 @@ flutter:
     - assets/3.png
     - assets/4.png
     - assets/5.png
+    - assets/1_hamburger.png
+    - assets/2_hamburger.png
+    - assets/3_hamburger.png
+    - assets/4_hamburger.png
+    - assets/5_hamburger.png
     - assets/pizza_all.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

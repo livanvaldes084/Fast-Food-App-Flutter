@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 import 'package:fast_food/widgets/horizontal_list.dart';
 import 'package:fast_food/commons/base_bar.dart';
+import 'package:fast_food/model/pizza_model.dart';
 
 class PizzasPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: BaseBar(
-        title: 'Discover pizzas'
+        title: 'Discover'
       ),
       drawer: CollapsingNavigationDrawer(currentSelectedIndex:0),
       body : Container(
@@ -18,15 +19,15 @@ class PizzasPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Pizzas',textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30.0),),
+            Text('Pizzas',textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.w900, fontSize: 24.0),),
             SizedBox(
               height: 8,
             ),
-            Text('Choose your pizza',style: TextStyle(color: Colors.grey, fontSize: 24.0),),
+            Text('Choose your pizza',style: TextStyle(color: Colors.grey, fontSize: 18.0),),
             SizedBox(
               height: 10,
             ),
-            ItemList(),
+            ItemList(items:pizzaItems),
           ],
         ),
       ),

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:fast_food/model/pizza_model.dart';
 import 'package:fast_food/widgets/list_items.dart';
 import 'package:fast_food/widgets/detail_items.dart';
 
 
 class ItemList extends StatefulWidget {
+  final List items;
+  ItemList({this.items});
 
   @override
-  _ItemListState createState() => _ItemListState();
+  _ItemListState createState() => _ItemListState(items:this.items);
 }
 
 class _ItemListState extends State<ItemList> with SingleTickerProviderStateMixin{
@@ -17,6 +18,9 @@ class _ItemListState extends State<ItemList> with SingleTickerProviderStateMixin
   AnimationController _animationController;
   Animation<double> widthAnimation;
   int currentSelectedIndex = 0;
+  List items;
+  _ItemListState({this.items});
+
   @override
   void initState() {
     // TODO: implement initState
@@ -47,19 +51,19 @@ class _ItemListState extends State<ItemList> with SingleTickerProviderStateMixin
                           });
                         },
                         isSelected: currentSelectedIndex == counter,
-                        title: pizzaItems[counter].title,
-                        picture: pizzaItems[counter].picture,
+                        title: items[counter].title,
+                        picture: items[counter].picture,
                         animationController : _animationController
                     );
                   },
-                  itemCount: pizzaItems.length,
+                  itemCount: items.length,
 
                 ),
               ),
               SizedBox(
                 height: 15,
               ),
-              DetailsPage(title: pizzaItems[currentSelectedIndex].title,price: pizzaItems[currentSelectedIndex].price,description: pizzaItems[currentSelectedIndex].description,picture: pizzaItems[currentSelectedIndex].picture)
+              DetailsPage(title: items[currentSelectedIndex].title,price: items[currentSelectedIndex].price,description: items[currentSelectedIndex].description,picture: items[currentSelectedIndex].picture)
             ],
           );
 
