@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fast_food/theme.dart';
+import 'package:fast_food/commons/counter.dart';
 
 class DetailsPage extends StatelessWidget {
   String title;
@@ -61,53 +62,7 @@ class DetailsPage extends StatelessWidget {
                           SizedBox(
                             height: 10,
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: drawerBackgroundColor,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(6.0),
-                                  child: Icon(
-                                    Icons.remove,
-                                    color: Colors.white,
-                                    size: 24,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Text(
-                                "0",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 22,
-                                    color: drawerBackgroundColor),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: drawerBackgroundColor,
-                                  shape: BoxShape.circle,
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(6.0),
-                                  child: Icon(
-                                    Icons.add,
-                                    color: Colors.white,
-                                    size: 24,
-                                  ),
-                                ),
-                              )
-                            ],
-                          )
+                          CounterItem(),
                         ],
                       ),
                     ),
