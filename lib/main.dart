@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CollapsingNavigationDrawer(),
+      drawer: CollapsingNavigationDrawer(currentSelectedIndex:0),
       body: Stack(
         children: <Widget>[
           Container(

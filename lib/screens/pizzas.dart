@@ -12,7 +12,7 @@ class PizzasPage extends StatelessWidget {
       appBar: BaseBar(
         title: 'Discover pizzas'
       ),
-      drawer: CollapsingNavigationDrawer(),
+      drawer: CollapsingNavigationDrawer(currentSelectedIndex:0),
       body : Container(
         color: Colors.white,
         padding: EdgeInsets.all(20.0),

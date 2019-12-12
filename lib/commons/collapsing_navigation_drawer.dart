@@ -4,8 +4,11 @@ import 'package:fast_food/theme.dart';
 import 'collapsing_list_title.dart';
 
 class CollapsingNavigationDrawer extends StatefulWidget {
+  final int currentSelectedIndex;
+  CollapsingNavigationDrawer({this.currentSelectedIndex});
+
   @override
-  _CollapsingNavigationDrawerState createState() => _CollapsingNavigationDrawerState();
+  _CollapsingNavigationDrawerState createState() => _CollapsingNavigationDrawerState(currentSelectedIndex:this.currentSelectedIndex);
 }
 
 class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer> with SingleTickerProviderStateMixin{
@@ -15,7 +18,8 @@ class _CollapsingNavigationDrawerState extends State<CollapsingNavigationDrawer>
   bool isCollapsed = false;
   AnimationController _animationController;
   Animation<double> widthAnimation;
-  int currentSelectedIndex = 0;
+  int currentSelectedIndex;
+  _CollapsingNavigationDrawerState({this.currentSelectedIndex});
   @override
   void initState() {
     // TODO: implement initState
