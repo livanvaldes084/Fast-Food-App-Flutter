@@ -39,7 +39,7 @@ class _ListItemsState extends State<ListItems> {
       onTap: widget.onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: widget.isSelected ? Colors.orange: itemListColor,
+          color: widget.isSelected ? drawerBackgroundColor: itemListColor,
           borderRadius: BorderRadius.all(Radius.circular(15.0)),
         ),
         width: 90,

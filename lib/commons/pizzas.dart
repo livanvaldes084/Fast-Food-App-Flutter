@@ -42,19 +42,19 @@ class _PizzasPageState extends State<PizzasPage> with SingleTickerProviderStateM
               return IconButton(
                 icon: const Icon(Icons.view_comfy),
                 onPressed: () { Scaffold.of(context).openDrawer(); },
-                color: Colors.orange,
+                color: drawerBackgroundColor,
               );
             },
           ),
           backgroundColor: Colors.white,
           title: Text(
             "Discover",
-            style: TextStyle(color: Colors.orange, fontSize: 30,fontWeight: FontWeight.bold),
+            style: TextStyle(color: drawerBackgroundColor, fontSize: 30,fontWeight: FontWeight.bold),
           ),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.add_shopping_cart),
-              color: Colors.orange,
+              color: drawerBackgroundColor,
               onPressed: () {
               },
             )

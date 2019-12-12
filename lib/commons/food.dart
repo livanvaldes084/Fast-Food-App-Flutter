@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
+import 'package:fast_food/theme.dart';
+
 class FoodPage extends StatefulWidget {
   @override
   _FoodPageState createState() => _FoodPageState();
@@ -16,19 +18,19 @@ class _FoodPageState extends State<FoodPage> {
               return IconButton(
                 icon: const Icon(Icons.view_comfy),
                 onPressed: () { Scaffold.of(context).openDrawer(); },
-                color: Colors.orange,
+                color: drawerBackgroundColor,
               );
             },
           ),
           backgroundColor: Colors.white,
           title: Text(
             "Discover",
-            style: TextStyle(color: Colors.orange, fontSize: 24,fontWeight: FontWeight.bold),
+            style: TextStyle(color: drawerBackgroundColor, fontSize: 24,fontWeight: FontWeight.bold),
           ),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.add_shopping_cart),
-              color: Colors.orange,
+              color: drawerBackgroundColor,
               onPressed: () {
               },
             )

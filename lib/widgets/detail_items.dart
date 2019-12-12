@@ -67,7 +67,7 @@ class DetailsPage extends StatelessWidget {
                                 children: <Widget>[
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: Colors.orange,
+                                      color: drawerBackgroundColor,
                                       shape: BoxShape.circle,
                                     ),
                                     child: Padding(
@@ -88,14 +88,14 @@ class DetailsPage extends StatelessWidget {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 22,
-                                        color: Colors.orange),
+                                        color: drawerBackgroundColor),
                                   ),
                                   SizedBox(
                                     width: 20,
                                   ),
                                   Container(
                                     decoration: BoxDecoration(
-                                      color: Colors.orange,
+                                      color: drawerBackgroundColor,
                                       shape: BoxShape.circle,
                                     ),
                                     child: Padding(
@@ -117,7 +117,7 @@ class DetailsPage extends StatelessWidget {
                         width: 400,
                         child: Container(
                           decoration: BoxDecoration(
-                            color: Colors.orange,
+                            color: Color.fromARGB(255,244,126,79),
                             shape: BoxShape.rectangle,
                             borderRadius: const BorderRadius.only(
                                 bottomRight: Radius.circular(30.0),
