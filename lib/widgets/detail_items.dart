@@ -11,148 +11,144 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: SizedBox(
-        height: 380,
+        height: 360,
         child: Stack(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(
-                  top: 60, left: 20, right: 20, bottom: 0),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: itemListColor,
-                  borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 30, left: 16, right: 16, bottom: 8),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: <Widget>[
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsets.only(top: 40),
-                          child: Column(
+            Container(
+              decoration: BoxDecoration(
+                color: itemListColor,
+                borderRadius: BorderRadius.all(Radius.circular(30.0)),
+              ),
+              margin: EdgeInsets.only(top: 50.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.only(top: 60.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Text(
+                            title,
+                            textAlign: TextAlign.end,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 22),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            description,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                                color: Colors.black12),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            price,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 22),
+                          ),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: <Widget>[
-                              Text(
-                                title,
-                                textAlign: TextAlign.end,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 22),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: drawerBackgroundColor,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Icon(
+                                    Icons.remove,
+                                    color: Colors.white,
+                                    size: 24,
+                                  ),
+                                ),
                               ),
                               SizedBox(
-                                height: 10,
+                                width: 20,
                               ),
                               Text(
-                                description,
+                                "0",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                    color: Colors.black12),
+                                    fontSize: 22,
+                                    color: drawerBackgroundColor),
                               ),
                               SizedBox(
-                                height: 10,
+                                width: 20,
                               ),
-                              Text(
-                                price,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 22),
-                              ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: drawerBackgroundColor,
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(6.0),
-                                      child: Icon(
-                                        Icons.remove,
-                                        color: Colors.white,
-                                        size: 24,
-                                      ),
-                                    ),
+                              Container(
+                                decoration: BoxDecoration(
+                                  color: drawerBackgroundColor,
+                                  shape: BoxShape.circle,
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Icon(
+                                    Icons.add,
+                                    color: Colors.white,
+                                    size: 24,
                                   ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Text(
-                                    "0",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 22,
-                                        color: drawerBackgroundColor),
-                                  ),
-                                  SizedBox(
-                                    width: 20,
-                                  ),
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      color: drawerBackgroundColor,
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(6.0),
-                                      child: Icon(
-                                        Icons.add,
-                                        color: Colors.white,
-                                        size: 24,
-                                      ),
-                                    ),
-                                  )
-                                ],
+                                ),
                               )
                             ],
-                          ),
-                        ),
+                          )
+                        ],
                       ),
-                      SizedBox(
-                        width: 400,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(255,244,126,79),
-                            shape: BoxShape.rectangle,
-                            borderRadius: const BorderRadius.only(
-                                bottomRight: Radius.circular(30.0),
-                                bottomLeft: Radius.circular(30.0)),
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(6.0),
-                            child: FlatButton.icon(
-                              icon: Icon(
-                                Icons.shopping_cart,
-                                color: Colors.white,
-                              ),
-                              //`Icon` to display
-                              label: Text(
-                                'Add to Car',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 18),
-                              ),
-                              //`Text` to display
-                              onPressed: () {
-                                //Code to execute when Floating Action Button is clicked
-                                //...
-                              },
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
+                  SizedBox(
+                    width: 400,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255,244,126,79),
+                        shape: BoxShape.rectangle,
+                        borderRadius: const BorderRadius.only(
+                            bottomRight: Radius.circular(30.0),
+                            bottomLeft: Radius.circular(30.0)),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: FlatButton.icon(
+                          icon: Icon(
+                            Icons.shopping_cart,
+                            color: Colors.white,
+                          ),
+                          //`Icon` to display
+                          label: Text(
+                            'Add to Car',
+                            style: TextStyle(
+                                color: Colors.white, fontSize: 18),
+                          ),
+                          //`Text` to display
+                          onPressed: () {
+                            //Code to execute when Floating Action Button is clicked
+                            //...
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             Positioned(
               top: 0,
-              left: 135,
+              left: 120,
               width: 140,
               height: 140,
               child: Container(

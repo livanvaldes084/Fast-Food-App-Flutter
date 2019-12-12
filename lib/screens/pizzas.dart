@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 import 'package:fast_food/widgets/horizontal_list.dart';
@@ -14,13 +15,21 @@ class PizzasPage extends StatelessWidget {
       drawer: CollapsingNavigationDrawer(),
       body : Container(
         color: Colors.white,
+        padding: EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Pizzas',style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),),
+            Text('Pizzas',textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.w800, fontSize: 30.0),),
+            SizedBox(
+              height: 8,
+            ),
             Text('Choose your pizza',style: TextStyle(color: Colors.grey, fontSize: 24.0),),
+            SizedBox(
+              height: 10,
+            ),
             ItemList(),
             SizedBox(
-              height: 15,
+              height: 10,
             ),
           ],
         ),

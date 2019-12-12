@@ -43,8 +43,8 @@ class _ListItemsState extends State<ListItems> {
           borderRadius: BorderRadius.all(Radius.circular(15.0)),
         ),
         width: 90,
-        margin: EdgeInsets.symmetric(horizontal: 8.0),
-        padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
+        margin: EdgeInsets.only(right: 10.0),
+        padding: EdgeInsets.all(8.0),
         child: Row(
           children: <Widget>[
             Image.asset(widget.picture)

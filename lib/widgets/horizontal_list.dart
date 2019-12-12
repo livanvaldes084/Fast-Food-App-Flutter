@@ -33,8 +33,7 @@ class _ItemListState extends State<ItemList> with SingleTickerProviderStateMixin
   }
 
   Widget getWidget(context,widget){
-    return Container(
-          child: Column(
+    return Column(
             children: <Widget>[
               Container(
                 height: 90,
@@ -62,8 +61,7 @@ class _ItemListState extends State<ItemList> with SingleTickerProviderStateMixin
               ),
               DetailsPage(title: pizzaItems[currentSelectedIndex].title,price: pizzaItems[currentSelectedIndex].price,description: pizzaItems[currentSelectedIndex].description)
             ],
-          ),
-    );
+          );
 
   }
 }
