@@ -1,8 +1,7 @@
-import 'package:fast_food/commons/food.dart';
-import 'package:fast_food/commons/pizzas.dart';
-import 'package:fast_food/commons/breackfast.dart';
-import 'package:fast_food/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:fast_food/screens/food.dart';
+import 'package:fast_food/screens/pizzas.dart';
+import 'package:fast_food/screens/breackfast.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 
 void main() => runApp(MyApp());
@@ -12,12 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(),
       routes: {
         'pizzas' : (context) => PizzasPage(),
         'food' : (context) => FoodPage(),
@@ -28,9 +23,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
