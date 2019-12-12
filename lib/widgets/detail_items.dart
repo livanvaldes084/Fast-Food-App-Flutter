@@ -11,8 +11,7 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: SizedBox(
-        height: 360,
+        height: 370,
         child: Stack(
           children: <Widget>[
             Container(
@@ -29,11 +28,9 @@ class DetailsPage extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.only(top: 60.0),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           SizedBox(
-                            height: 15,
+                            height: 10,
                           ),
                           Text(
                             title,
@@ -60,6 +57,9 @@ class DetailsPage extends StatelessWidget {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 22),
+                          ),
+                          SizedBox(
+                            height: 10,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -161,7 +161,6 @@ class DetailsPage extends StatelessWidget {
             )
           ],
         ),
-      ),
     );
   }
 }

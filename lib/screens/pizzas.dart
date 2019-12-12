@@ -28,9 +28,6 @@ class PizzasPage extends StatelessWidget {
               height: 10,
             ),
             ItemList(),
-            SizedBox(
-              height: 10,
-            ),
           ],
         ),
       ),
