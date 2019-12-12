@@ -6,7 +6,8 @@ class DetailsPage extends StatelessWidget {
   String title;
   String price;
   String description;
-  DetailsPage({this.title, this.price, this.description});
+  String picture;
+  DetailsPage({this.title, this.price, this.description, this.picture});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -149,14 +150,14 @@ class DetailsPage extends StatelessWidget {
             Positioned(
               top: 0,
               left: 120,
-              width: 140,
-              height: 140,
+              width: 120,
+              height: 120,
               child: Container(
                   decoration: new BoxDecoration(
                       shape: BoxShape.circle,
                       image: new DecorationImage(
                           fit: BoxFit.cover,
-                          image: new AssetImage("assets/img/pizza_all.jpg")))),
+                          image: new AssetImage(picture)))),
             )
           ],
         ),
