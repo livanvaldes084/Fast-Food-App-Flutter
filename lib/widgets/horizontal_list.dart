@@ -60,7 +60,7 @@ class _ItemListState extends State<ItemList> with SingleTickerProviderStateMixin
               SizedBox(
                 height: 20,
               ),
-              DetailsPage(title: pizzaItems[currentSelectedIndex].title,)
+              DetailsPage(title: pizzaItems[currentSelectedIndex].title,price: pizzaItems[currentSelectedIndex].price,description: pizzaItems[currentSelectedIndex].description)
             ],
           ),
     );

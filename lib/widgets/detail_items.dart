@@ -4,7 +4,9 @@ import 'package:fast_food/theme.dart';
 
 class DetailsPage extends StatelessWidget {
   String title;
-  DetailsPage({this.title});
+  String price;
+  String description;
+  DetailsPage({this.title, this.price, this.description});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,7 +46,7 @@ class DetailsPage extends StatelessWidget {
                                 height: 10,
                               ),
                               Text(
-                                'Pain boulanger, 1 steak haché 130gr frais origine France, oignons',
+                                description,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -55,7 +57,7 @@ class DetailsPage extends StatelessWidget {
                                 height: 10,
                               ),
                               Text(
-                                "5.00",
+                                price,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 22),
