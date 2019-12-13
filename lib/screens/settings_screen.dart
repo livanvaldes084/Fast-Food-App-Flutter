@@ -13,7 +13,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(counter:8),
-      drawer: CollapsingNavigationDrawer(currentSelectedIndex:0),
+      drawer: CollapsingNavigationDrawer(currentSelectedIndex:2),
       backgroundColor: drawerBackgroundColor,
       body : Container(
         color: drawerBackgroundColor,

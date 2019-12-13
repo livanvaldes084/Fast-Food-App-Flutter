@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 import 'package:fast_food/commons/custom_app_bar.dart';
 import 'package:fast_food/theme.dart';
+import 'package:fast_food/models/cart_model.dart';
+import 'package:fast_food/widgets/vertical_list.dart';
 
 class CartScreen extends StatefulWidget {
   @override
@@ -33,10 +35,11 @@ class _CartScreenState extends State<CartScreen> {
                 )
               ],
             ),
+            SizedBox(
+              height: 20,
+            ),
             Expanded(
-              child: Row(
-                children: <Widget>[],
-              ),
+              child: VerticalList(items:cartItems),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,

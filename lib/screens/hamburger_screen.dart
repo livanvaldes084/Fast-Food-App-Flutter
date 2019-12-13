@@ -14,7 +14,7 @@ class _HamburguersScreenState extends State<HamburguersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(counter:8),
-      drawer: CollapsingNavigationDrawer(currentSelectedIndex:0),
+      drawer: CollapsingNavigationDrawer(currentSelectedIndex:1),
       body : Container(
         color: Colors.white,
         padding: EdgeInsets.all(20.0),
