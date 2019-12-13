@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 import 'package:fast_food/widgets/horizontal_list.dart';
-import 'package:fast_food/model/breackfast_model.dart';
+import 'package:fast_food/models/pizza_model.dart';
 import 'package:fast_food/commons/custom_app_bar.dart';
 
-class BreakFastPage extends StatefulWidget {
+class PizzazScreen extends StatefulWidget {
   @override
-  _BreakFastPageState createState() => _BreakFastPageState();
+  _PizzazScreenState createState() => _PizzazScreenState();
 }
 
-class _BreakFastPageState extends State<BreakFastPage> {
+class _PizzazScreenState extends State<PizzazScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(counter:8),
       drawer: CollapsingNavigationDrawer(currentSelectedIndex:0),
       body : Container(
         color: Colors.white,
@@ -22,15 +21,15 @@ class _BreakFastPageState extends State<BreakFastPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text('Breakfast',textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.w900, fontSize: 24.0),),
+            Text('Pizzas',textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.w900, fontSize: 24.0),),
             SizedBox(
               height: 8,
             ),
-            Text('Choose your breakfast',style: TextStyle(color: Colors.grey, fontSize: 18.0),),
+            Text('Choose your pizza',style: TextStyle(color: Colors.grey, fontSize: 18.0),),
             SizedBox(
               height: 10,
             ),
-            ItemList(items:breackfastItems),
+            ItemList(items:pizzaItems),
           ],
         ),
       ),

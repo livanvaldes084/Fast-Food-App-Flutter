@@ -8,8 +8,6 @@ class NavigationModel{
 
 List<NavigationModel> navigationItems = [
   NavigationModel(title:"Pizzas", icon: Icons.local_pizza, cmp: "pizzas"),
-  NavigationModel(title:"Hamburger", icon: Icons.fastfood, cmp: "hamburger"),
-  NavigationModel(title:"Breakfast", icon: Icons.free_breakfast, cmp: "breackfast"),
-  NavigationModel(title:"Bar", icon: Icons.local_bar, cmp: ""),
-  NavigationModel(title:"Cake", icon: Icons.cake, cmp: "")
+  NavigationModel(title:"Hamburger", icon: Icons.fastfood, cmp: "hamburgers"),
+  NavigationModel(title:"Settings", icon: Icons.fastfood, cmp: "settings"),
 ];

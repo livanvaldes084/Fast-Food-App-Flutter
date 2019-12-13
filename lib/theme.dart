@@ -5,5 +5,6 @@ TextStyle listTitleSelectedTextStyle = TextStyle(color: Colors.white, fontSize: 
 
 Color selectedColor = Colors.yellow;
 Color drawerBackgroundColor = Color(0xFFEA935D);
+Color bgColorWhite = Colors.white;
 Color itemListColor = Color(0xFFEEEEEE);
 Color subtitleGray = Color(0xB7B6B6);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fast_food/model/navigation_model.dart';
+import 'package:fast_food/models/navigation_model.dart';
 import 'package:fast_food/theme.dart';
 import 'collapsing_list_title.dart';
 

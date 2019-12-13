@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fast_food/screens/hamburger.dart';
-import 'package:fast_food/screens/pizzas.dart';
-import 'package:fast_food/screens/breackfast.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
+import 'package:fast_food/screens/hamburger_screen.dart';
+import 'package:fast_food/screens/pizzas_screen.dart';
+import 'package:fast_food/screens/settings_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: MyHomePage(),
       routes: {
-        'pizzas' : (context) => PizzasPage(),
-        'hamburger' : (context) => HamburgerPage(),
-        'breackfast' : (context) => BreakFastPage(),
+        'pizzas' : (context) => PizzazScreen(),
+        'hamburgers' : (context) => HamburguersScreen(),
+        'settings' : (context) => SettingsScreen()
       },
     );
   }
@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         children: <Widget>[
           Container(
             color: Colors.white,
-            child: PizzasPage(),
+            child: PizzazScreen(),
           ),
         ],
       )

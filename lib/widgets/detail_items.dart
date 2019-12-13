@@ -2,13 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fast_food/theme.dart';
 import 'package:fast_food/commons/counter.dart';
+import 'package:fast_food/services/currency_service.dart';
 
 class DetailsPage extends StatelessWidget {
   String title;
-  String price;
+  double price;
   String description;
   String picture;
-  DetailsPage({this.title, this.price, this.description, this.picture});
+  String currency;
+  DetailsPage({this.title, this.price, this.description, this.picture, this.currency});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -53,12 +55,27 @@ class DetailsPage extends StatelessWidget {
                           SizedBox(
                             height: 10,
                           ),
-                          Text(
-                            price,
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 22),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                CurrencyService().getSymbol(currency),
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 22),
+                              ),
+                              SizedBox(
+                                width: 8.0,
+                              ),
+                              Text(
+                                price.toString(),
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 22),
+                              ),
+                            ],
                           ),
+
                           SizedBox(
                             height: 10,
                           ),
@@ -92,8 +109,7 @@ class DetailsPage extends StatelessWidget {
                           ),
                           //`Text` to display
                           onPressed: () {
-                            //Code to execute when Floating Action Button is clicked
-                            //...
+                            print(1);
                           },
                         ),
                       ),

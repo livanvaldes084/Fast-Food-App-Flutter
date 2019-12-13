@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 import 'package:fast_food/widgets/horizontal_list.dart';
-import 'package:fast_food/model/hamburger_model.dart';
+import 'package:fast_food/models/hamburger_model.dart';
 import 'package:fast_food/commons/custom_app_bar.dart';
 
-class HamburgerPage extends StatelessWidget {
+class HamburguersScreen extends StatefulWidget {
+  @override
+  _HamburguersScreenState createState() => _HamburguersScreenState();
+}
+
+class _HamburguersScreenState extends State<HamburguersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(counter:8),
       drawer: CollapsingNavigationDrawer(currentSelectedIndex:0),
       body : Container(
         color: Colors.white,
@@ -32,3 +36,4 @@ class HamburgerPage extends StatelessWidget {
     );
   }
 }
+
