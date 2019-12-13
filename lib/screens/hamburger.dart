@@ -1,17 +1,15 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:fast_food/commons/collapsing_navigation_drawer.dart';
 import 'package:fast_food/widgets/horizontal_list.dart';
-import 'package:fast_food/commons/base_bar.dart';
 import 'package:fast_food/model/hamburger_model.dart';
+import 'package:fast_food/commons/custom_app_bar.dart';
 
 class HamburgerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: BaseBar(
-          title: 'Discover'
-      ),
+      appBar: CustomAppBar(),
       drawer: CollapsingNavigationDrawer(currentSelectedIndex:0),
       body : Container(
         color: Colors.white,

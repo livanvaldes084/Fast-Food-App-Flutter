@@ -10,12 +10,14 @@ class _CounterItemState extends State<CounterItem> {
   void _incrementCounter() {
     // Built in Flutter Method.
     setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
       _counter++;
+    });
+  }
+  void _decrementCounter() {
+    // Built in Flutter Method.
+    setState(() {
+      if(_counter > 0)
+        _counter--;
     });
   }
   @override
@@ -28,13 +30,14 @@ class _CounterItemState extends State<CounterItem> {
             color: drawerBackgroundColor,
             shape: BoxShape.circle,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(6.0),
-            child: Icon(
-              Icons.remove,
-              color: Colors.white,
-              size: 24,
-            ),
+          child: SizedBox(
+              height: 36.0,
+              width: 36.0,
+              child: new IconButton(
+                  padding: new EdgeInsets.all(0.0),
+                  icon: new Icon(Icons.remove, size: 18.0,color: Colors.white),
+                  onPressed:_decrementCounter
+              )
           ),
         ),
         SizedBox(
@@ -57,8 +60,8 @@ class _CounterItemState extends State<CounterItem> {
             shape: BoxShape.circle,
           ),
           child: SizedBox(
-              height: 40.0,
-              width: 40.0,
+              height: 36.0,
+              width: 36.0,
               child: new IconButton(
                 padding: new EdgeInsets.all(0.0),
                 icon: new Icon(Icons.add, size: 18.0,color: Colors.white),
