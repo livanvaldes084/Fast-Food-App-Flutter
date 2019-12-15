@@ -56,7 +56,6 @@ class _CartScreenState extends State<CartScreen> {
             Row(
               children: <Widget>[
                 Expanded(
-                  flex: 2,
                   child: Text(
                     'Total',
                     style: TextStyle(
@@ -67,6 +66,7 @@ class _CartScreenState extends State<CartScreen> {
                 ),
                 Expanded(
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Text(
                         'USD',
