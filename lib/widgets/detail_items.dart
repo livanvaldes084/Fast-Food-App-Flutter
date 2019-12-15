@@ -17,7 +17,6 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 370,
       child: Stack(
         children: <Widget>[
           Container(

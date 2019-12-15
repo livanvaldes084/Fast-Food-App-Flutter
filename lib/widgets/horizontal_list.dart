@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:fast_food/widgets/list_items.dart';
 import 'package:fast_food/widgets/detail_items.dart';
 
-
 class ItemList extends StatefulWidget {
   final List items;
   ItemList({this.items});
@@ -37,36 +36,52 @@ class _ItemListState extends State<ItemList> with SingleTickerProviderStateMixin
   }
 
   Widget getWidget(context,widget){
-    return Column(
-            children: <Widget>[
-              Container(
-                height: 90,
-                child:  ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context,counter){
-                    return ListItems(
-                        onTap:(){
-                          setState(() {
-                            currentSelectedIndex = counter;
-                          });
-                        },
-                        isSelected: currentSelectedIndex == counter,
-                        title: items[counter].title,
-                        picture: items[counter].picture,
-                        animationController : _animationController
-                    );
-                  },
-                  itemCount: items.length,
+    return Expanded(
+      child: Column(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(
+              constraints: BoxConstraints.expand(),
+              child: _listItems(),
+            ),
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          Expanded(
+            flex: 10,
+            child: Container(
+              constraints: BoxConstraints.expand(),
+              child: Center(
+                child: DetailsPage(title: items[currentSelectedIndex].title,price: items[currentSelectedIndex].price,description: items[currentSelectedIndex].description, picture: items[currentSelectedIndex].picture, currency: items[currentSelectedIndex].currency),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
 
-                ),
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              DetailsPage(title: items[currentSelectedIndex].title,price: items[currentSelectedIndex].price,description: items[currentSelectedIndex].description, picture: items[currentSelectedIndex].picture, currency: items[currentSelectedIndex].currency)
-            ],
+  }
+
+  Widget _listItems(){
+      return  ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemBuilder: (context,counter){
+          return ListItems(
+              onTap:(){
+                setState(() {
+                  currentSelectedIndex = counter;
+                });
+              },
+              isSelected: currentSelectedIndex == counter,
+              title: items[counter].title,
+              picture: items[counter].picture,
+              animationController : _animationController
           );
-
+        },
+        itemCount: items.length,
+      );
   }
 }
 
