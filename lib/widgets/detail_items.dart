@@ -48,6 +48,8 @@ class DetailsPage extends StatelessWidget {
                           child: Text(
                             description,
                             textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 3,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
