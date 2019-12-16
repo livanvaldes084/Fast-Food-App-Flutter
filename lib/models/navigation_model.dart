@@ -9,5 +9,5 @@ class NavigationModel{
 List<NavigationModel> navigationItems = [
   NavigationModel(title:"Pizzas", icon: Icons.local_pizza, cmp: "pizzas"),
   NavigationModel(title:"Hamburger", icon: Icons.fastfood, cmp: "hamburgers"),
-  NavigationModel(title:"Settings", icon: Icons.fastfood, cmp: "settings"),
+  NavigationModel(title:"Settings", icon: Icons.settings, cmp: "settings"),
 ];
