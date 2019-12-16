@@ -39,7 +39,8 @@ class _VerticalListState extends State<VerticalList> {
             title: items[counter].title,
             picture: items[counter].picture,
             price: items[counter].price,
-            currency: items[counter].currency
+            currency: items[counter].currency,
+            cant: items[counter].cant
         );
       },
       itemCount: items.length,

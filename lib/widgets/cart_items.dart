@@ -6,6 +6,7 @@ class CartItems extends StatefulWidget {
   final String picture;
   final double price;
   final String currency;
+  final int cant;
   final Function onTap;
 
   CartItems(
@@ -13,6 +14,7 @@ class CartItems extends StatefulWidget {
       @required this.picture,
       @required this.price,
       @required this.currency,
+      @required this.cant,
       this.onTap});
 
   @override
@@ -21,7 +23,19 @@ class CartItems extends StatefulWidget {
 
 class _CartItemsState extends State<CartItems> {
   int _counter = 0;
-
+  void _incrementCounter() {
+    // Built in Flutter Method.
+    setState(() {
+      _counter++;
+    });
+  }
+  void _decrementCounter() {
+    // Built in Flutter Method.
+    setState(() {
+      if(_counter > 0)
+        _counter--;
+    });
+  }
   @override
   void initState() {
     // TODO: implement initState
@@ -70,7 +84,7 @@ class _CartItemsState extends State<CartItems> {
                   width: 5,
                 ),
                 Text(
-                  widget.price.toString(),
+                  _counter !=0 ? (widget.price * _counter).toString():(widget.price * widget.cant).toString(),
                   style: TextStyle(color: Colors.white),
                 ),
               ],
@@ -94,10 +108,12 @@ class _CartItemsState extends State<CartItems> {
               color: Colors.white,
             ),
             onPressed: () {
-              setState(() {});
+              if(_counter == 0)
+                _counter = widget.cant;
+              _incrementCounter();
             }),
         Text(
-          '$_counter',
+          _counter==0?widget.cant.toString():_counter.toString(),
           style: TextStyle(color: Colors.white),
         ),
         IconButton(
@@ -107,7 +123,9 @@ class _CartItemsState extends State<CartItems> {
               color: Colors.white,
             ),
             onPressed: () {
-              setState(() {});
+              if(_counter == 0)
+                _counter = widget.cant;
+                _decrementCounter();
             }),
       ],
     );
