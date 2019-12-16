@@ -8,6 +8,8 @@ class CartItems extends StatefulWidget {
   final String currency;
   final int cant;
   final Function onTap;
+  final ValueChanged<double> parentAction;
+  final double total;
 
   CartItems(
       {@required this.title,
@@ -15,7 +17,8 @@ class CartItems extends StatefulWidget {
       @required this.price,
       @required this.currency,
       @required this.cant,
-      this.onTap});
+      @required this.total,
+      this.onTap,this.parentAction});
 
   @override
   _CartItemsState createState() => _CartItemsState();
@@ -27,6 +30,7 @@ class _CartItemsState extends State<CartItems> {
     // Built in Flutter Method.
     setState(() {
       _counter++;
+      widget.parentAction((widget.total+_counter.toDouble()).toDouble());
     });
   }
   void _decrementCounter() {
@@ -34,6 +38,7 @@ class _CartItemsState extends State<CartItems> {
     setState(() {
       if(_counter > 0)
         _counter--;
+      widget.parentAction((widget.total-_counter.toDouble()).toDouble());
     });
   }
   @override

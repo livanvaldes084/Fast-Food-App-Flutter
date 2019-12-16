@@ -11,6 +11,13 @@ class CartScreen extends StatefulWidget {
 }
 
 class _CartScreenState extends State<CartScreen> {
+  double total = 77.00;
+
+  _updateTotal(double num) {
+    setState(() {
+      total = num;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +46,7 @@ class _CartScreenState extends State<CartScreen> {
               height: 20,
             ),
             Expanded(
-              child: VerticalList(items:cartItems),
+              child: VerticalList(items:cartItems, parentAction: _updateTotal, total: total),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -79,7 +86,7 @@ class _CartScreenState extends State<CartScreen> {
                         width: 10.0,
                       ),
                       Text(
-                        '77.00',
+                        '$total',
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 24.0,
