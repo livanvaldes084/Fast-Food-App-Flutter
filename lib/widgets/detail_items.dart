@@ -24,15 +24,14 @@ class DetailsPage extends StatelessWidget {
               color: itemListColor,
               borderRadius: BorderRadius.all(Radius.circular(30.0)),
             ),
-            margin: EdgeInsets.only(top: 50.0),
+            margin: EdgeInsets.only(top: 60.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.only(top: 60.0),
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
                           title,
