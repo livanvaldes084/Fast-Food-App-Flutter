@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:fast_food/theme.dart';
+import 'package:fast_food/services/currency_service.dart';
 
 class CartItems extends StatefulWidget {
-
   final String title;
   final String picture;
+  final double price;
+  final String currency;
   final Function onTap;
 
-  CartItems({
-    @required this.title,
-    @required this.picture,
-    this.onTap
-  });
+  CartItems(
+      {@required this.title,
+      @required this.picture,
+      @required this.price,
+      @required this.currency,
+      this.onTap});
+
   @override
   _CartItemsState createState() => _CartItemsState();
 }
 
 class _CartItemsState extends State<CartItems> {
+  int _counter = 0;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-
   }
 
   @override
@@ -30,34 +33,82 @@ class _CartItemsState extends State<CartItems> {
     return Column(
       children: <Widget>[
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            Container(
-              height: 60,
-              width: 60,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              ),
-              margin: EdgeInsets.only(right: 10.0),
-              padding: EdgeInsets.all(8.0),
-              child: Row(
-                children: <Widget>[
-                  Image.asset(widget.picture)
-                ],
-              ),
+            Row(
+              children: <Widget>[
+                Container(
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(15.0)),
+                  ),
+                  margin: EdgeInsets.only(right: 10.0),
+                  padding: EdgeInsets.all(8.0),
+                  child: Row(
+                    children: <Widget>[Image.asset(widget.picture)],
+                  ),
+                ),
+                Text(
+                  widget.title,
+                  textAlign: TextAlign.start,
+                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                )
+              ],
             ),
-            Text(
-              widget.title,
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.white),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                countProduct(),
+                Text(
+                  CurrencyService().getSymbol(widget.currency),
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text(
+                  widget.price.toString(),
+                  style: TextStyle(color: Colors.white),
+                ),
+              ],
             )
           ],
         ),
         SizedBox(
           height: 20,
         )
+      ],
+    );
+  }
+
+  Widget countProduct() {
+    return Column(
+      children: <Widget>[
+        IconButton(
+            icon: Icon(
+              Icons.expand_less,
+              size: 32.0,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              setState(() {});
+            }),
+        Text(
+          '$_counter',
+          style: TextStyle(color: Colors.white),
+        ),
+        IconButton(
+            icon: Icon(
+              Icons.expand_more,
+              size: 32.0,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              setState(() {});
+            }),
       ],
     );
   }
