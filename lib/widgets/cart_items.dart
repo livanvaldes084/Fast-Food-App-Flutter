@@ -53,7 +53,6 @@ class _CartItemsState extends State<CartItems> {
       children: <Widget>[
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             Row(
               children: <Widget>[
